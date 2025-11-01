@@ -109,6 +109,7 @@
         /* Bloco de conteúdo (substitui as abas) */
         .content-block {
             margin-bottom: 24px;
+            margin: 0 30px;
             padding-bottom: 16px;
             border-bottom: 1px dashed var(--google-border);
         }
@@ -292,30 +293,28 @@
     </svg>
 
     <div class="container">
-        
-        <header>
-            <svg class="logo-svg" fill="white"><use xlink:href="#logo-sheets"></use></svg>
-            <h1>Google Planilhas</h1>
+     <header>
+     <svg class="logo-svg" fill="white"><use xlink:href="#logo-sheets"></use></svg>
+      <h1>Google Planilhas</h1>
         </header>
 
         <main>
-
-            <section>
-                <h2>Fundamentos Essenciais</h2>
-                
-                <div class="content-block">
-                    <h3>
+          <section>
+            <h2>Introdução e Manipulação de Dados</h2>
+            <div class="content-block">
+              <h3>
                         <svg class="content-icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16"><path d="M11 2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1zm-3 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1zM5 2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1zm-3 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1zm11 5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1zm-3 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1zm-3 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1zm-3 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1zm11 5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1zm-3 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1zm-3 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1zm-3 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1z"/></svg>
-                        Acesso e Reconhecimento da Interface
+                        1. Introdução ao Google Planilhas
                     </h3>
-                    <p>
-                        O Google Planilhas é um aplicativo de planilhas online gratuito parte do Google Workspace. Você o acessa pelo seu navegador (via Google Drive ou sheets.google.com).
-                    </p>
+        <p>O Google Planilhas (Google Sheets) é uma ferramenta gratuita da Google Workspace que permite criar, editar e compartilhar planilhas eletrônicas online, diretamente no navegador, sem necessidade de instalação.</p><p>
+Ela se destaca por permitir colaboração em tempo real, o que significa que várias pessoas podem editar o mesmo documento simultaneamente, com as alterações salvas automaticamente na nuvem (Google Drive).</p>
+
                     <p>A interface principal é composta por:</p>
                     <ul>
-                        <li><strong>Barra de Menus:</strong> Contém todos os comandos (Arquivo, Editar, Ver, Inserir, etc.).</li>
-                        <li><strong>Barra de Ferramentas:</strong> Ícones para ações rápidas (formatar, imprimir, zoom).</li>
-                        <li><strong>Barra de Fórmulas (fx):</strong> Onde você vê e edita o conteúdo real da célula selecionada.</li>
+                      <li><strong>Barra de Título:</strong> Exibe o nome do arquivo. À direita: Compartilhar, comentários e perfil.</li>
+                        <li><strong>Barra de Menus:</strong> Menus: Arquivo, Editar, Exibir, Inserir, Formatar, Dados, Ferramentas, Extensões, Ajuda.</li>
+                        <li><strong>Barra de Ferramentas:</strong> Ícones rápidos: negrito, itálico, alinhamento, cores, gráfico, filtro, comentário.</li>
+                        <li><strong>Barra de Fórmulas (fx):</strong> Mostra/edita a célula ativa. Fórmulas com = (ex.: =SOMA(A1:A5)).</li>
                         <li><strong>Grade Principal:</strong> O conjunto de linhas e colunas.</li>
                         <li><strong>Guias de Página:</strong> Na parte inferior, permite alternar entre diferentes planilhas no mesmo arquivo.</li>
                     </ul>
@@ -324,21 +323,24 @@
                 <div class="content-block">
                     <h3>
                         <svg class="content-icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16"><path d="M6 1H5v2H3v1h2v2H3v1h2v2H3v1h2v2H3v1h2v2h1V1zm3 15h1V1H9v15zm3 0h1V1h-1v15z"/></svg>
-                        Termos Básicos: Linha, Coluna e Célula
+                        2. Estrutura da Planilha
                     </h3>
-                    <p>Toda planilha é organizada por três elementos fundamentais:</p>
+                    <p>A interface do Google Planilhas é organizada em linhas, colunas e células, formando uma grade de dados.
+                      Cada célula pode conter números, textos, fórmulas ou até imagens.</p><p>
+Cada ponto de encontro entre uma linha e uma coluna é uma célula, onde os dados são inseridos.</p>
                     <ul>
-                        <li><strong>Linha:</strong> É a divisão horizontal da planilha. É sempre identificada por <strong>números</strong> (1, 2, 3...).</li>
-                        <li><strong>Coluna:</strong> É a divisão vertical da planilha. É sempre identificada por <strong>letras</strong> (A, B, C...).</li>
-                        <li><strong>Célula:</strong> É o "quadrado" individual onde os dados são inseridos. É a interseção de uma linha e uma coluna, dando-lhe um endereço único (ex: <code>A1</code>, <code>B26</code>, <code>C4</code>).</li>
+                        <li><strong>Linha:</strong> disposição horizontal de células, identificada por números (1, 2, 3...). </li>
+                        <li><strong>Coluna:</strong> disposição vertical de células, identificada por letras (A, B, C...).</li>
+                        <li><strong>Célula:</strong> unidade básica de entrada e manipulação de dados. Exemplo: <code>A1</code> (coluna A, linha 1).</li>
                     </ul>
                 </div>
 
                 <div class="content-block">
                     <h3>
                         <svg class="content-icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5h6a.5.5 0 0 0 0-1h-6A1.5 1.5 0 0 0 1 2.5zM15 1.5a.5.5 0 0 0-.5-.5H5a.5.5 0 0 0 0 1h9a.5.5 0 0 0 .5-.5M15 4.5a.5.5 0 0 0-.5-.5H5a.5.5 0 0 0 0 1h9a.5.5 0 0 0 .5-.5"/></svg>
-                        Manipular Dados
+                        3. Manipulação de Dados
                     </h3>
+                  <p>A manipulação de dados envolve inserir, editar, apagar, mover e copiar informações dentro da planilha.</p>
                     <ul>
                         <li><strong>Inserir Dados:</strong> Simplesmente clique em uma célula e comece a digitar. Pressione 'Enter' para confirmar e ir para a célula abaixo.</li>
                         <li><strong>Editar Dados:</strong> Clique duas vezes na célula ou selecione-a e pressione 'F2'. Você também pode editar diretamente na Barra de Fórmulas.</li>
@@ -351,10 +353,11 @@
                 <div class="content-block">
                     <h3>
                         <svg class="content-icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5M3.854 2.146a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L2 2.793l1.146-1.147a.5.5 0 0 1 .708 0m0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L2 6.793l1.146-1.147a.5.5 0 0 1 .708 0m0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L2 10.793l1.146-1.147a.5.5 0 0 1 .708 0"/></svg>
-                        Criar Listas Automáticas (Alça de Preenchimento)
+                        4. Criação de Listas Automáticas (Alça de Preenchimento)
                     </h3>
-                    <p>O Planilhas pode preencher sequências de dados automaticamente usando a <strong>Alça de Preenchimento</strong>.</p>
+                    <p>O Google Planilhas pode preencher sequências de dados automaticamente usando a <strong>Alça de Preenchimento</strong>.</p>
                     <p>A Alça de Preenchimento é o pequeno quadrado azul no canto inferior direito de uma célula selecionada.</p>
+                  <h3>Exemplos:</h3>
                     <ul>
                         <li><strong>Números:</strong> Digite <code>1</code> em uma célula e <code>2</code> na célula abaixo. Selecione as duas. Clique e arraste a alça para baixo para continuar a sequência (3, 4, 5...).</li>
                         <li><strong>Datas:</strong> Digite uma data (ex: <code>01/01/2025</code>). Clique e arraste a alça para preencher os dias seguintes.</li>
@@ -365,7 +368,7 @@
                 <div class="content-block">
                     <h3>
                         <svg class="content-icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16"><path d="M1 3.5a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13a.5.5 0 0 1-.5-.5M3 7a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1A.5.5 0 0 1 3 7m0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5m-2 4a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13a.5.5 0 0 1-.5-.5M7 7a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5m0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5m4-3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5m0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5"/></svg>
-                        Redimensionar, Inserir e Excluir Linhas/Colunas
+                        5. Redimensionar, Inserir e Excluir Linhas e Colunas
                     </h3>
                     <ul>
                         <li><strong>Redimensionar:</strong> Posicione o mouse sobre a linha divisória entre duas letras de coluna (ou números de linha) no cabeçalho. O cursor mudará para uma seta dupla. Clique e arraste para redimensionar.</li>
@@ -377,7 +380,7 @@
                 <div class="content-block">
                     <h3>
                         <svg class="content-icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16"><path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0"/><path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8m8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7"/></svg>
-                        Modos de Visualização da Planilha
+                        6. Modos de Visualização
                     </h3>
                     <p>O menu <strong>"Ver"</strong> controla como você enxerga seus dados, sem alterá-los.</p>
                     <ul>
@@ -391,8 +394,8 @@
             </section>
             
             <section id="dynamic-examples">
-                <h2>Teste na Prática!</h2>
-                <p>Experimente simulações de algumas funcionalidades-chave:</p>
+                <h2>Exemplo Prático!</h2>
+                <p>Simule algumas funcionalidades-chave:</p>
                 
                 <div class="demo-container">
                     
@@ -589,4 +592,3 @@
 </body>
 
 </html>
-
