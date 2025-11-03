@@ -352,7 +352,7 @@ Cada ponto de encontro entre uma linha e uma coluna é uma célula, onde os dado
                         <li><strong>Copiar Dados:</strong> Selecione a célula, pressione <code>Ctrl+C</code> (Copiar), clique na célula de destino e pressione <code>Ctrl+V</code> (Colar).</li>
                     </ul>
                     <section id="dynamic-examples">
-                      <h2>Experiência Interativa – Inserir e Editar Dados</h2>
+                      <h3>Experiência Interativa – Inserir e Editar Dados</h2>
                       <p>Teste na prática: clique na célula, insira um dado e pressione Enter.</p>
                     <div class="demo-container">
                         <div class="demo-box">
@@ -379,7 +379,28 @@ Cada ponto de encontro entre uma linha e uma coluna é uma célula, onde os dado
                         <li><strong>Datas:</strong> Digite uma data (ex: <code>01/01/2025</code>). Clique e arraste a alça para preencher os dias seguintes.</li>
                         <li><strong>Padrões:</strong> Funciona com dias da semana ("segunda-feira"), meses ("janeiro"), e padrões ("Trimestre 1").</li>
                     </ul>
+                <section id="dynamic-examples">
+                <h3>Experiência Interativa – Inserir e Editar Dados</h2>
+                <div class="demo-box">
+                <h4>Simulador: Criar Listas Automáticas</h4>
+                  <p>Digite "1" na primeira célula (B1). Em seguida, clique e arraste a "alça" verde para baixo para preencher a série.</p>
+                  <div class="mini-sheet">
+                    <div class="mini-cell header"></div>
+                    <div class="mini-cell header">B</div>
+                    <div class="mini-cell header">1</div>
+                    <div class="mini-cell data" id="cell-b1" contenteditable="true">1<div class="fill-handle"></div>
+                    </div>
+                    <div class="mini-cell header">2</div>
+                    <div class="mini-cell data fill-target" data-row="2"></div>
+                    <div class="mini-cell header">3</div>
+                    <div class="mini-cell data fill-target" data-row="3"></div>
+                    <div class="mini-cell header">4</div>
+                    <div class="mini-cell data fill-target" data-row="4"></div>
+                  </div>
                 </div>
+                </section>
+                </div>
+              
                 
                 <div class="content-block">
                     <h3>
@@ -608,6 +629,7 @@ Cada ponto de encontro entre uma linha e uma coluna é uma célula, onde os dado
 </body>
 
 </html>
+
 
 
 
