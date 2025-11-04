@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fórmulas no Google Planilhas</title>
+  <style>
+    :root {
+      --google-green: #34A853;
+      --google-green-dark: #0F9D58;
+      --google-green-light: #e6f4ea;
+      --google-text: #202124;
+      --google-text-secondary: #5f6368;
+      --google-bg: #f8f9fa;
+      --google-border: #dadce0;
+    }
+    body {
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
+      background-color: var(--google-bg);
+      color: var(--google-text);
+      margin: 0;
+      padding: 24px;
+      line-height: 1.6;
+    }
+    header {
+      background-color: var(--google-green);
+      color: white;
+      padding: 20px 32px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    header .logo { width: 40px; height: 40px; border-radius: 6px; border: 2px solid rgba(255,255,255,0.6); }
+    header h1 { font-size: 28px; margin: 0; font-weight: 500; }
+    main {
+      background-color: #fff;
+      border-radius: 12px;
+      padding: 32px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      margin: 20px auto;
+      max-width: 960px;
+    }
+    h2 {
+      color: var(--google-green-dark);
+      border-bottom: 2px solid var(--google-green-light);
+      padding-bottom: 8px;
+      margin-top: 32px;
+      margin-bottom: 16px;
+      font-size: 22px;
+    }
+    h3 {
+      color: var(--google-green);
+      margin-top: 20px;
+      margin-bottom: 8px;
+      font-size: 18px;
+    }
+    p { text-align: justify; margin: 8px 0; }
+    code { background-color: #f1f3f4; padding: 3px 6px; border-radius: 4px; font-family: monospace; }
+    figure {
+      margin: 20px auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 90%;
+    }
+    figure img {
+      width: 100%;
+      max-width: 800px;
+      height: auto;
+      border: 2px solid var(--google-border);
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    figcaption {
+      font-size: 0.92rem;
+      color: var(--google-text-secondary);
+      text-align: center;
+      margin-top: 8px;
+    }
+    ul { list-style-type: disc; margin-left: 24px; }
+    footer { text-align: center; font-size: 0.9rem; color: var(--google-text-secondary); margin-top: 40px; }
+    .note { background: var(--google-green-light); border-left: 4px solid var(--google-green-dark); padding: 8px 12px; border-radius: 6px; }
+  </style>
+</head>
+<body>
+  <header>
+    <img class="logo" src="assets/img/menus.png" alt="Ícone do Google Planilhas">
+    <h1>Fórmulas e Funções no Google Planilhas</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2>1. O que são Fórmulas e Funções</h2>
+      <p>Fórmulas são instruções inseridas nas células para realizar cálculos, analisar dados ou automatizar tarefas. Elas sempre começam com o sinal de igual (<code>=</code>), seguido por operadores, referências de células ou funções pré-definidas.</p>
+      <p>As funções são comandos prontos que simplificam cálculos comuns, como somar, contar, encontrar valores máximos e mínimos ou aplicar condições lógicas.</p>
+      <div class="note"><strong>Dica:</strong> No idioma Português (Brasil), o separador de argumentos é <code>;</code> (ponto e vírgula).</div>
+    </section>
+
+    <section>
+      <h2>2. Estrutura Básica de uma Fórmula</h2>
+      <p>Toda fórmula no Google Planilhas segue a estrutura:</p>
+      <p><code>=FUNÇÃO(intervalo ou expressão)</code></p>
+      <p>Exemplo para somar os valores das células de A1 até A5:</p>
+      <p><code>=SOMA(A1:A5)</code></p>
+      <figure>
+        <img src="assets/img/formula-soma.png" alt="Exemplo de fórmula SOMA no Google Planilhas">
+        <figcaption>Fórmula básica de soma entre as células A1 a A5.</figcaption>
+      </figure>
+    </section>
+
+    <section>
+      <h2>3. Operações Aritméticas</h2>
+      <h3>➕ Soma</h3>
+      <p><code>=SOMA(A1:A5)</code> — Soma todos os valores do intervalo.</p>
+
+      <h3>➖ Subtração</h3>
+      <p><code>=A1-A2</code> — Subtrai o valor da célula A2 de A1.</p>
+
+      <h3>✖️ Multiplicação</h3>
+      <p><code>=A1*B1</code> — Multiplica os valores das células A1 e B1.</p>
+
+      <h3>➗ Divisão</h3>
+      <p><code>=A1/B1</code> — Divide o valor da célula A1 pelo de B1.</p>
+
+      <figure>
+        <img src="assets/img/formula-matematica.png" alt="Exemplo de operações matemáticas no Google Planilhas">
+        <figcaption>Uso de fórmulas básicas de soma, subtração, multiplicação e divisão.</figcaption>
+      </figure>
+    </section>
+
+    <section>
+      <h2>4. Função Condicional SE</h2>
+      <p>A função <code>SE</code> realiza um teste lógico e retorna um valor se o teste for verdadeiro e outro se for falso.</p>
+      <p><strong>Estrutura:</strong> <code>=SE(condição; valor_se_verdadeiro; valor_se_falso)</code></p>
+      <p><strong>Exemplo:</strong> <code>=SE(A1&gt;10; "Maior que 10"; "Menor ou igual a 10")</code></p>
+      <figure>
+        <img src="assets/img/formula-se.png" alt="Função SE no Google Planilhas">
+        <figcaption>Exemplo da função SE avaliando uma condição lógica.</figcaption>
+      </figure>
+    </section>
+
+    <section>
+      <h2>5. Funções de Comparação: MÁXIMO e MÍNIMO</h2>
+      <p><code>=MÁXIMO(A1:A10)</code> — Retorna o maior valor do intervalo.</p>
+      <p><code>=MÍNIMO(A1:A10)</code> — Retorna o menor valor do intervalo.</p>
+      <figure>
+        <img src="assets/img/formula-maxmin.png" alt="Funções máximo e mínimo no Google Planilhas">
+        <figcaption>Funções MÁXIMO e MÍNIMO aplicadas a um intervalo de células.</figcaption>
+      </figure>
+    </section>
+
+    <section>
+      <h2>6. Boas Práticas e Erros Comuns</h2>
+      <ul>
+        <li>Use sempre o sinal de igual (<code>=</code>) para iniciar a fórmula.</li>
+        <li>No Brasil, o separador de argumentos é <code>;</code> (ponto e vírgula).</li>
+        <li>Verifique as referências de célula e intervalos (ex.: <code>A1:A10</code>).</li>
+        <li>Use parênteses para controlar a ordem das operações.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>Material desenvolvido para fins educacionais – IFMT / UAB</p>
+  </footer>
+</body>
+</html>
