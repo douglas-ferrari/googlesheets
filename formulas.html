@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fórmulas no Google Planilhas</title>
+  <title>Fundamentos de Fórmulas no Google Planilhas</title>
   <style>
     :root {
       --google-green: #34A853;
@@ -33,7 +33,7 @@
       max-width: 960px;
       margin: 0 auto;
     }
-    header .logo { width: 40px; height: 40px; border-radius: 6px; border: 2px solid rgba(255,255,255,0.6); }
+    /* Removido o .logo pois o caminho da imagem não está disponível */
     header h1 { font-size: 28px; margin: 0; font-weight: 500; }
     main {
       background-color: #fff;
@@ -53,113 +53,161 @@
     }
     h3 {
       color: var(--google-green);
-      margin-top: 20px;
+      margin-top: 24px;
       margin-bottom: 8px;
       font-size: 18px;
     }
     p { text-align: justify; margin: 8px 0; }
-    code { background-color: #f1f3f4; padding: 3px 6px; border-radius: 4px; font-family: monospace; }
-    figure {
-      margin: 20px auto;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      max-width: 90%;
-    }
-    figure img {
-      width: 100%;
-      max-width: 800px;
-      height: auto;
-      border: 2px solid var(--google-border);
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    }
-    figcaption {
-      font-size: 0.92rem;
-      color: var(--google-text-secondary);
-      text-align: center;
-      margin-top: 8px;
-    }
-    ul { list-style-type: disc; margin-left: 24px; }
+    code { background-color: #f1f3f4; padding: 3px 6px; border-radius: 4px; font-family: monospace; font-size: 0.95rem; }
+    ul { list-style-type: disc; margin-left: 24px; padding-left: 0; }
+    li { margin-bottom: 8px; }
     footer { text-align: center; font-size: 0.9rem; color: var(--google-text-secondary); margin-top: 40px; }
-    .note { background: var(--google-green-light); border-left: 4px solid var(--google-green-dark); padding: 8px 12px; border-radius: 6px; }
+    .note { 
+      background: var(--google-green-light); 
+      border-left: 4px solid var(--google-green-dark); 
+      padding: 12px 16px; 
+      border-radius: 6px; 
+      margin: 16px 0;
+    }
+    .note strong { color: var(--google-green-dark); }
+    /* Estilo para links de referência */
+    .references a {
+      color: var(--google-green-dark);
+      text-decoration: none;
+    }
+    .references a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
   <header>
-    <img class="logo" src="assets/img/menus.png" alt="Ícone do Google Planilhas">
-    <h1>Fórmulas e Funções no Google Planilhas</h1>
+    <h1>Fundamentos de Fórmulas e Funções no Google Planilhas</h1>
   </header>
 
   <main>
     <section>
-      <h2>1. O que são Fórmulas e Funções</h2>
-      <p>Fórmulas são instruções inseridas nas células para realizar cálculos, analisar dados ou automatizar tarefas. Elas sempre começam com o sinal de igual (<code>=</code>), seguido por operadores, referências de células ou funções pré-definidas.</p>
-      <p>As funções são comandos prontos que simplificam cálculos comuns, como somar, contar, encontrar valores máximos e mínimos ou aplicar condições lógicas.</p>
-      <div class="note"><strong>Dica:</strong> No idioma Português (Brasil), o separador de argumentos é <code>;</code> (ponto e vírgula).</div>
-    </section>
-
-    <section>
-      <h2>2. Estrutura Básica de uma Fórmula</h2>
-      <p>Toda fórmula no Google Planilhas segue a estrutura:</p>
-      <p><code>=FUNÇÃO(intervalo ou expressão)</code></p>
-      <p>Exemplo para somar os valores das células de A1 até A5:</p>
-      <p><code>=SOMA(A1:A5)</code></p>
-      <figure>
-        <img src="assets/img/formula-soma.png" alt="Exemplo de fórmula SOMA no Google Planilhas">
-        <figcaption>Fórmula básica de soma entre as células A1 a A5.</figcaption>
-      </figure>
-    </section>
-
-    <section>
-      <h2>3. Operações Aritméticas</h2>
-      <h3>➕ Soma</h3>
-      <p><code>=SOMA(A1:A5)</code> — Soma todos os valores do intervalo.</p>
-
-      <h3>➖ Subtração</h3>
-      <p><code>=A1-A2</code> — Subtrai o valor da célula A2 de A1.</p>
-
-      <h3>✖️ Multiplicação</h3>
-      <p><code>=A1*B1</code> — Multiplica os valores das células A1 e B1.</p>
-
-      <h3>➗ Divisão</h3>
-      <p><code>=A1/B1</code> — Divide o valor da célula A1 pelo de B1.</p>
-
-      <figure>
-        <img src="assets/img/formula-matematica.png" alt="Exemplo de operações matemáticas no Google Planilhas">
-        <figcaption>Uso de fórmulas básicas de soma, subtração, multiplicação e divisão.</figcaption>
-      </figure>
-    </section>
-
-    <section>
-      <h2>4. Função Condicional SE</h2>
-      <p>A função <code>SE</code> realiza um teste lógico e retorna um valor se o teste for verdadeiro e outro se for falso.</p>
-      <p><strong>Estrutura:</strong> <code>=SE(condição; valor_se_verdadeiro; valor_se_falso)</code></p>
-      <p><strong>Exemplo:</strong> <code>=SE(A1&gt;10; "Maior que 10"; "Menor ou igual a 10")</code></p>
-      <figure>
-        <img src="assets/img/formula-se.png" alt="Função SE no Google Planilhas">
-        <figcaption>Exemplo da função SE avaliando uma condição lógica.</figcaption>
-      </figure>
-    </section>
-
-    <section>
-      <h2>5. Funções de Comparação: MÁXIMO e MÍNIMO</h2>
-      <p><code>=MÁXIMO(A1:A10)</code> — Retorna o maior valor do intervalo.</p>
-      <p><code>=MÍNIMO(A1:A10)</code> — Retorna o menor valor do intervalo.</p>
-      <figure>
-        <img src="assets/img/formula-maxmin.png" alt="Funções máximo e mínimo no Google Planilhas">
-        <figcaption>Funções MÁXIMO e MÍNIMO aplicadas a um intervalo de células.</figcaption>
-      </figure>
-    </section>
-
-    <section>
-      <h2>6. Boas Práticas e Erros Comuns</h2>
+      <h2>1. Conceitos: Fórmulas vs. Funções</h2>
+      <p>No Google Planilhas, é essencial diferenciar Fórmulas de Funções:</p>
       <ul>
-        <li>Use sempre o sinal de igual (<code>=</code>) para iniciar a fórmula.</li>
-        <li>No Brasil, o separador de argumentos é <code>;</code> (ponto e vírgula).</li>
-        <li>Verifique as referências de célula e intervalos (ex.: <code>A1:A10</code>).</li>
-        <li>Use parênteses para controlar a ordem das operações.</li>
+        <li><strong>Fórmula:</strong> É a expressão completa que você insere em uma célula para realizar um cálculo. Ela <strong>sempre</strong> começa com o sinal de igual (<code>=</code>). Uma fórmula pode conter operadores, referências de células, valores fixos (constantes) e funções.
+          <br><em>Exemplo:</em> <code>=A1+B1</code> ou <code>=SOMA(A1:A5) / 10</code></li>
+        <li><strong>Função:</strong> É uma operação predefinida e nomeada que realiza um cálculo específico, simplificando fórmulas complexas. Funções recebem "argumentos" (dados para processar) dentro de parênteses.
+          <br><em>Exemplo:</em> <code>SOMA</code>, <code>MÉDIA</code>, <code>SE</code>, <code>PROCV</code></li>
       </ul>
+      <p>Em resumo: você escreve uma <strong>fórmula</strong> que pode (ou não) usar <strong>funções</strong>.</p>
+    </section>
+
+    <section>
+      <h2>2. A Sintaxe de uma Fórmula</h2>
+      <p>Toda fórmula inicia com <code>=</code> e é seguida pelos elementos de cálculo. Os argumentos dentro das funções são separados por ponto e vírgula (<code>;</code>) na configuração regional do Brasil.</p>
+      
+      <h3>Exemplo 1: Fórmula com Operadores</h3>
+      <p>Para somar o valor da célula A1 com B1:</p>
+      <p><code>=A1+B1</code></p>
+      
+      <h3>Exemplo 2: Fórmula com Função</h3>
+      <p>Para somar todos os valores no intervalo (range) de A1 até A5:</p>
+      <p><code>=SOMA(A1:A5)</code></p>
+      <p>Aqui, <code>A1:A5</code> é o argumento que define o intervalo de células para a função <code>SOMA</code>.</p>
+    </section>
+
+    <section>
+      <h2>3. Operadores Aritméticos e Ordem de Precedência</h2>
+      <p>Operadores são símbolos usados para executar operações matemáticas básicas:</p>
+      <ul>
+        <li><strong>Adição:</strong> <code>+</code> (ex: <code>=A1+B1</code>)</li>
+        <li><strong>Subtração:</strong> <code>-</code> (ex: <code>=A1-B1</code>)</li>
+        <li><strong>Multiplicação:</strong> <code>*</code> (ex: <code>=A1*B1</code>)</li>
+        <li><strong>Divisão:</strong> <code>/</code> (ex: <code>=A1/B1</code>)</li>
+        <li><strong>Exponenciação (Potência):</strong> <code>^</code> (ex: <code>=A1^2</code>)</li>
+      </ul>
+      
+      <div class="note">
+        <strong>Importante: Ordem de Precedência</strong>
+        <p>O Google Planilhas segue a ordem matemática padrão (PEMDAS/BODMAS) para calcular:</p>
+        <ol>
+          <li><strong>P</strong>arênteses <code>( )</code></li>
+          <li><strong>E</strong>xpoentes <code>^</code></li>
+          <li><strong>M</strong>ultiplicação <code>*</code> e <strong>D</strong>ivisão <code>/</code></li>
+          <li><strong>A</strong>dição <code>+</code> e <strong>S</strong>ubtração <code>-</code></li>
+        </ol>
+        <p>Use parênteses para forçar a ordem desejada. <code>=(A1+A2)*10</code> é diferente de <code>=A1+A2*10</code>.</p>
+      </div>
+    </section>
+    
+    <section>
+      <h2>4. Funções Essenciais</h2>
+      <p>Funções automatizam cálculos comuns. Aqui estão algumas das mais usadas:</p>
+      
+      <h3>Funções Matemáticas e Estatísticas</h3>
+      <ul>
+        <li><code>=SOMA(intervalo)</code>: Soma todos os números em um intervalo de células.
+          <br><em>Ex:</em> <code>=SOMA(A1:A10)</code></li>
+        <li><code>=MÉDIA(intervalo)</code>: Calcula a média aritmética dos números no intervalo.
+          <br><em>Ex:</em> <code>=MÉDIA(A1:A10)</code></li>
+        <li><code>=MÁXIMO(intervalo)</code>: Retorna o maior valor numérico no intervalo.
+          <br><em>Ex:</em> <code>=MÁXIMO(A1:A10)</code></li>
+        <li><code>=MÍNIMO(intervalo)</code>: Retorna o menor valor numérico no intervalo.
+          <br><em>Ex:</em> <code>=MÍNIMO(A1:A10)</code></li>
+        <li><code>=CONT.NÚM(intervalo)</code>: Conta quantas células contêm números no intervalo.
+          <br><em>Ex:</em> <code>=CONT.NÚM(A1:A10)</code></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>5. Função Condicional SE (IF)</h2>
+      <p>A função <code>SE</code> é uma das mais poderosas. Ela permite que a planilha tome decisões, retornando um valor se uma condição for verdadeira e outro valor se ela for falsa.</p>
+      <p><strong>Estrutura:</strong> <code>=SE(teste_logico; valor_se_verdadeiro; valor_se_falso)</code></p>
+      <ul>
+        <li><strong>teste_logico:</strong> A condição que você quer verificar (ex: <code>A1 > 10</code>, <code>B2 = "Aprovado"</code>).</li>
+        <li><strong>valor_se_verdadeiro:</strong> O que a célula deve exibir se o teste for VERDADEIRO.</li>
+        <li><strong>valor_se_falso:</strong> O que a célula deve exibir se o teste for FALSO.</li>
+      </ul>
+      <p><strong>Exemplo:</strong> Verificar se um aluno foi aprovado (nota em A1 maior ou igual a 7):</p>
+      <p><code>=SE(A1>=7; "Aprovado"; "Reprovado")</code></p>
+    </section>
+    
+    <section>
+      <h2>6. Fundamento Essencial: Tipos de Referência de Célula</h2>
+      <p>Quando você copia e cola uma fórmula, as referências de célula (como <code>A1</code>) podem mudar. Controlar isso é vital.</p>
+
+      <h3>Referência Relativa (o padrão)</h3>
+      <p><code>=A1</code>: Quando você copia esta fórmula para baixo, ela se ajusta (<code>A2</code>, <code>A3</code>...). Quando copia para o lado, ela também se ajusta (<code>B1</code>, <code>C1</code>...).</p>
+
+      <h3>Referência Absoluta (fixa/travada)</h3>
+      <p><code>=$A$1</code>: O símbolo <code>$</code> (cifrão) "trava" a coluna (A) e a linha (1). Não importa para onde você copie a fórmula, ela <strong>sempre</strong> apontará para <code>$A$1</code>.
+      <br><em>Uso:</em> Ideal para referenciar uma taxa de juros, um imposto ou uma constante que está em uma célula fixa.</p>
+
+      <h3>Referência Mista</h3>
+      <p><code>=$A1</code> (Coluna absoluta, linha relativa): A coluna <code>A</code> fica travada, mas a linha <code>1</code> se ajusta ao ser copiada para baixo.</p>
+      <p><code>=A$1</code> (Coluna relativa, linha absoluta): A coluna <code>A</code> se ajusta ao ser copiada para o lado, mas a linha <code>1</code> fica travada.</p>
+      <div class="note"><strong>Dica:</strong> Use a tecla <strong>F4</strong> no seu teclado com o cursor sobre uma referência (como <code>A1</code>) dentro da fórmula para alternar rapidamente entre os tipos de referência (<code>A1</code> -> <code>$A$1</code> -> <code>A$1</code> -> <code>$A1</code>).</div>
+    </section>
+
+    <section>
+      <h2>7. Boas Práticas e Erros Comuns</h2>
+      <ul>
+        <li><strong>Separador de Argumentos:</strong> No Brasil, use ponto e vírgula (<code>;</code>) para separar argumentos (ex: <code>=SE(A1>10; "Sim"; "Não")</code>). Em inglês (EUA), usa-se vírgula (<code>,</code>).</li>
+        <li><strong>Separador Decimal:</strong> No Brasil, use vírgula (<code>,</code>) para decimais (ex: <code>10,50</code>).</li>
+        <li><strong>Evite "Hardcoding":</strong> Não insira valores fixos (como taxas) diretamente nas fórmulas (ex: <code>=A1 * 0,05</code>). É melhor colocar o valor <code>0,05</code> em uma célula (ex: <code>C1</code>) e usar uma referência absoluta: <code>=A1 * $C$1</code>. Assim, se a taxa mudar, você só altera a célula <code>C1</code>.</li>
+        <li><strong>Erros Comuns:</strong>
+            <ul>
+              <li><code>#DIV/0!</code>: Tentativa de divisão por zero.</li>
+              <li><code>#REF!</code>: A fórmula usa uma referência de célula que não existe mais (ex: você excluiu a coluna).</li>
+              <li><code>#NOME?</code> (ou <code>#NAME?</code>): O Planilhas não reconhece o nome da função (ex: digitou <code>=SOMA</code> errado).</li>
+              <li><code>#VALOR!</code>: A fórmula recebeu um tipo de dado inesperado (ex: tentar somar texto com número).</li>
+            </ul>
+        </li>
+      </ul>
+    </section>
+    
+    <section class="references">
+        <h2>8. Referências</h2>
+        <p>Para uma lista completa de todas as funções disponíveis no Google Planilhas, consulte a documentação oficial:</p>
+        <ul>
+            <li><a href="https://support.google.com/docs/table/25273?hl=pt" target="_blank">Lista de funções do Planilhas Google (Suporte do Google)</a></li>
+        </ul>
     </section>
   </main>
 
