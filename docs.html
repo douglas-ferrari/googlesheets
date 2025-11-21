@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula Introdutória: Google Docs</title>
+
+    <style>
+        :root {
+            --cor-primaria: #4285F4; /* Azul Google */
+            --cor-secundaria: #34A853; /* Verde Google */
+            --cor-fundo: #f8f9fa;
+            --cor-texto: #202124;
+            --cor-card-fundo: #ffffff;
+            --cor-nav-fundo: #e8e8e8;
+            --cor-borda-suave: #ccc;
+        }
+
+        body.dark {
+            --cor-fundo: #121212;
+            --cor-texto: #e4e4e4;
+            --cor-card-fundo: #1f1f1f;
+            --cor-nav-fundo: #222222;
+            --cor-borda-suave: #444;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            margin: 0;
+            background: var(--cor-fundo);
+            color: var(--cor-texto);
+            line-height: 1.6;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        header {
+            background: var(--cor-primaria);
+            color: white;
+            padding: 20px 40px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.25);
+            transition: background-color 0.3s ease;
+        }
+
+        body.dark header {
+            background: #2553a8;
+        }
+
+        header h1 {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            margin: 0;
+        }
+
+        header p {
+            margin-top: 10px;
+            font-size: 0.95em;
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            padding: 12px;
+            background: var(--cor-nav-fundo);
+            border-bottom: 1px solid var(--cor-borda-suave);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+        }
+
+        nav .nav-esquerda,
+        nav .nav-direita {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        nav .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex: 1;
+            max-width: 1150px;
+        }
+
+        nav button {
+            background: transparent;
+            border: 1px solid transparent;
+            padding: 8px 14px;
+            cursor: pointer;
+            border-radius: 20px;
+            font-size: 0.9em;
+            transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease, transform 0.15s ease;
+            color: var(--cor-texto);
+        }
+
+        nav button:hover {
+            background: var(--cor-primaria);
+            color: white;
+            border-color: rgba(0,0,0,0.05);
+            transform: translateY(-1px);
+        }
+
+        nav button#btn-tema {
+            border-color: rgba(0,0,0,0.2);
+            background: rgba(255,255,255,0.2);
+            color: #fff;
+        }
+
+        body.dark nav button#btn-tema {
+            border-color: rgba(255,255,255,0.3);
+            background: rgba(0,0,0,0.4);
+        }
+
+        main {
+            max-width: auto;
+            margin: 0px 0px;
+            padding: 0px 0px;
+        }
+
+        section {
+            background: var(--cor-card-fundo);
+          text-align: justify;
+            padding: 25px;
+            padding-left: 60px;
+            padding-right: 60px;
+            border-radius: 0px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 35px;
+            transition: background-color 0.3s ease, box-shadow 0.25s ease, transform 0.2s ease;
+        }
+
+        section:hover {
+            box-shadow: 0 4px 10px rgba(0,0,0,0.18);
+            transform: translateY(-2px);
+        }
+
+        h2 {
+            color: var(--cor-primaria);
+            border-bottom: 2px solid var(--cor-primaria);
+            padding-bottom: 4px;
+            margin-bottom: 18px;
+        }
+
+        h3 {
+            margin-top: 20px;
+            color: var(--cor-secundaria);
+        }
+
+        ul, ol {
+            padding-left: 22px;
+        }
+
+        .exemplo {
+            background: #f1f3f4;
+            padding: 10px;
+            border-left: 4px solid var(--cor-secundaria);
+            border-radius: 0 6px 6px 0;
+            margin: 15px 0;
+            font-style: italic;
+            transition: background-color 0.3s ease;
+        }
+
+        body.dark .exemplo {
+            background: #2a2f33;
+        }
+
+        figure {
+            border: 2px dashed var(--cor-borda-suave);
+            background: #f0f0f0;
+            padding: 15px;
+            margin: 20px 0;
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+        }
+
+        body.dark figure {
+            background: #252525;
+        }
+
+        figcaption {
+            font-size: 0.9em;
+            font-style: italic;
+            margin-top: 8px;
+            color: #666;
+        }
+
+        body.dark figcaption {
+            color: #aaa;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        @media (max-width: 700px) {
+            header {
+                padding: 20px;
+            }
+            header h1 {
+                flex-direction: column;
+                text-align: center;
+            }
+            nav .nav-container {
+                flex-direction: column;
+                gap: 10px;
+            }
+            nav {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>
+        <span style="
+            background:white;
+            padding:10px;
+            border-radius:50%;
+            display:flex;
+            box-shadow:0 0 6px rgba(0,0,0,0.15);
+        ">
+            <img src="https://www.gstatic.com/images/branding/product/1x/docs_2020q4_48dp.png"
+                 alt="Google Docs" style="width:42px;">
+        </span>
+        Google Docs: Introdução e Barra de Menus
+    </h1>
+
+  
+</header>
+
+<main>
+
+    <!-- INTRODUÇÃO -->
+    <section id="introducao">
+        <h2>1. Introdução ao Google Editor de Texto (Google Docs)</h2>
+
+        <p>
+            O <strong>Google Docs</strong> é um processador de texto on-line, integrante do Google Workspace.
+            Ele permite criar, editar, organizar e compartilhar documentos com armazenamento automático na nuvem
+            por meio do <strong>Google Drive</strong>.
+        </p>
+
+        <h3>O que é um editor de texto on-line?</h3>
+        <p>
+            Um editor de texto on-line é uma aplicação que funciona diretamente no navegador, sem necessidade de instalação
+            local. A partir do modelo de <strong>computação em nuvem</strong>, os documentos podem ser acessados em
+            diferentes dispositivos (computador, tablet, celular) conectados à internet.
+        </p>
+
+        <p>Para utilizar o Google Docs, o usuário precisa de:</p>
+        <ul>
+            <li>Conta Google (pessoal ou institucional);</li>
+            <li>Acesso à internet e a um navegador atualizado;</li>
+            <li>Um dispositivo compatível (PC, notebook, tablet ou smartphone).</li>
+        </ul>
+
+        <h3>Principais vantagens</h3>
+        <ul>
+            <li><strong>Colaboração em tempo real:</strong> várias pessoas podem editar simultaneamente.</li>
+            <li><strong>Salvamento automático:</strong> reduz o risco de perder o trabalho.</li>
+            <li><strong>Histórico de versões:</strong> possibilita ver e restaurar versões anteriores.</li>
+            <li><strong>Acesso remoto:</strong> documentos disponíveis de qualquer lugar.</li>
+            <li><strong>Integração:</strong> funciona de forma integrada ao Drive, Gmail, Classroom, entre outros.</li>
+        </ul>
+
+        <div class="exemplo">
+            Em projetos em grupo, o Google Docs permite que todos escrevam no mesmo documento,
+            comentem e revisem em tempo real, sem a troca de múltiplos arquivos por e-mail.
+        </div>
+
+        <h3>🌐 Como acessar o Google Docs</h3>
+        <ol>
+            <li>Acessando o <strong>Google Drive</strong> e selecionando <strong>+ Novo &gt; Documentos Google</strong>.</li>
+            <li>Acessando diretamente o endereço: <a href="https://docs.google.com" target="_blank">docs.google.com</a>.</li>
+        </ol>
+
+        <figure>
+            <strong>INSERIR IMAGEM:</strong> Tela inicial do Drive com o botão “+ Novo”.
+            <figcaption>Objetivo: ilustrar o ponto de partida para criação de um novo documento.</figcaption>
+        </figure>
+
+
+    <!-- INTERFACE -->
+    
+        <h2>2. Interface Inicial do Google Docs</h2>
+
+        <p>
+            Ao abrir um documento, a interface do Google Docs organiza os recursos em áreas bem definidas,
+            facilitando a escrita e a formatação do texto.
+        </p>
+
+        <ul>
+            <li><strong>Barra de Título:</strong> mostra o nome do documento; é onde você renomeia o arquivo.</li>
+            <li><strong>Barra de Menus:</strong> reúne os comandos principais em grupos como Arquivo, Editar, Inserir, etc.</li>
+            <li><strong>Barra de Ferramentas:</strong> exibe ícones para acesso rápido a funções de formatação.</li>
+            <li><strong>Área de Edição:</strong> região central onde o texto é digitado, organizado e visualizado.</li>
+            <li><strong>Botão Compartilhar:</strong> permite definir quem pode visualizar, comentar ou editar o documento.</li>
+        </ul>
+
+        <figure>
+            <strong>INSERIR IMAGEM:</strong> Interface do Google Docs com destaques nos elementos principais.
+            <figcaption>Ajuda o estudante a relacionar conceito e prática ao abrir um documento real.</figcaption>
+        </figure>
+  
+
+    <!-- BARRA DE MENUS -->
+   
+        <h2>3. A Barra de Menus</h2>
+        <p>
+            A <strong>Barra de Menus</strong> é o centro de controle do editor. Ela organiza os comandos
+            em categorias lógicas que facilitam a localização das funções.
+        </p>
+
+        <h3>📁 Arquivo</h3>
+        <ul>
+            <li><strong>Novo, Abrir, Fazer uma cópia:</strong> gerenciam a criação e reutilização de documentos.</li>
+            <li><strong>Fazer download:</strong> exporta o arquivo para formatos como PDF, DOCX, ODT, entre outros.</li>
+            <li><strong>Histórico de versões:</strong> mostra alterações realizadas e permite restaurar versões antigas.</li>
+            <li><strong>Imprimir:</strong> envia o documento para a impressora ou gera uma visualização de impressão.</li>
+        </ul>
+
+        <h3>✏️ Editar</h3>
+        <ul>
+            <li><strong>Desfazer / Refazer:</strong> permitem voltar ou avançar ações recentes.</li>
+            <li><strong>Copiar, Recortar, Colar:</strong> manipulam trechos de texto ou elementos.</li>
+            <li><strong>Selecionar tudo:</strong> marca todo o conteúdo do documento.</li>
+        </ul>
+
+        <h3>👁️ Exibir</h3>
+        <ul>
+            <li><strong>Modos de exibição:</strong> edição, sugestão e visualização.</li>
+            <li><strong>Régua:</strong> auxilia na organização do layout.</li>
+            <li><strong>Zoom:</strong> aproxima ou afasta a visualização da página.</li>
+        </ul>
+
+        <h3>➕ Inserir</h3>
+        <ul>
+            <li><strong>Imagens, Tabelas, Desenhos, Gráficos:</strong> enriquecem o documento com elementos visuais.</li>
+            <li><strong>Links:</strong> criam hiperlinks para páginas da web ou partes do próprio documento.</li>
+            <li><strong>Cabeçalho, Rodapé, Números de página:</strong> itens comuns em trabalhos acadêmicos e relatórios.</li>
+        </ul>
+
+        <h3>🎨 Formatar</h3>
+        <ul>
+            <li><strong>Fonte e tamanho:</strong> definem a aparência básica do texto.</li>
+            <li><strong>Negrito, Itálico, Sublinhado:</strong> destacam informações importantes.</li>
+            <li><strong>Alinhamento e recuo:</strong> organizam visualmente os parágrafos.</li>
+            <li><strong>Espaçamento entre linhas:</strong> ajusta o espaço vertical entre linhas e parágrafos.</li>
+            <li><strong>Estilos de parágrafo:</strong> Título 1, Título 2, Normal etc. criam hierarquia no texto.</li>
+        </ul>
+
+        <h3>🛠️ Ferramentas</h3>
+        <ul>
+            <li><strong>Verificação ortográfica:</strong> identifica palavras possivelmente incorretas.</li>
+            <li><strong>Contagem de palavras:</strong> informa o número de páginas, palavras, caracteres.</li>
+            <li><strong>Digitação por voz:</strong> converte fala em texto.</li>
+        </ul>
+    </section>
+
+    <!-- EXEMPLOS -->
+    <section id="exemplos">
+        <h2>📝 4. Exemplos Práticos</h2>
+
+        <ol>
+            <li>
+                Crie um novo documento, renomeie-o na barra de título para 
+                <strong>“Meu Primeiro Documento no Google Docs”</strong>.
+            </li>
+            <li>
+                Digite um parágrafo de apresentação com 3 a 5 linhas e aplique negrito ao seu nome.
+            </li>
+            <li>
+                Utilize o menu <strong>Formatar</strong> para alterar o alinhamento e o espaçamento entre linhas.
+            </li>
+            <li>
+                Insira uma tabela (3 colunas x 3 linhas) com uma pequena lista de tarefas ou horários.
+            </li>
+            <li>
+                Clique em <strong>Compartilhar</strong> e envie o documento para um colega, definindo a permissão como Comentador.
+            </li>
+        </ol>
+
+        <div class="exemplo">
+            Como atividade de revisão, os alunos podem comentar o texto uns dos outros
+            sugerindo melhorias de clareza, coesão e correção gramatical.
+        </div>
+    </section>
+
+</main>
+
+<script>
+    function scrollToSection(id) {
+        const el = document.getElementById(id);
+        if (el) {
+            el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    }
+
+    function alternarTema() {
+        const body = document.body;
+        const btn = document.getElementById('btn-tema');
+        body.classList.toggle('dark');
+        if (body.classList.contains('dark')) {
+            btn.textContent = 'Tema claro';
+        } else {
+            btn.textContent = 'Tema escuro';
+        }
+    }
+
+    // Define texto inicial do botão conforme tema padrão
+    document.addEventListener('DOMContentLoaded', () => {
+        const btn = document.getElementById('btn-tema');
+        if (document.body.classList.contains('dark')) {
+            btn.textContent = 'Tema claro';
+        } else {
+            btn.textContent = 'Tema escuro';
+        }
+    });
+</script>
+
+</body>
+</html>
