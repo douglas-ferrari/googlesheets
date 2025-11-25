@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <title>Google Planilhas – Introdução e Aulas 1 a 3</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        :root {
+            --cor-fundo: #f7f7f7;
+            --cor-primaria: #1b5e20;
+            --cor-secundaria: #2e7d32;
+            --cor-borda: #cccccc;
+            --cor-tabela-header: #e8f5e9;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: var(--cor-fundo);
+            color: #222;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px 16px 40px;
+            background: #ffffff;
+        }
+
+        header {
+            border-bottom: 4px solid var(--cor-primaria);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            color: var(--cor-primaria);
+            font-size: 1.8rem;
+        }
+
+        header p {
+            margin: 4px 0 0;
+            font-size: 0.95rem;
+            color: #555;
+        }
+
+        h2, h3, h4 {
+            color: var(--cor-secundaria);
+            margin-top: 24px;
+            margin-bottom: 8px;
+        }
+
+        p {
+            margin: 6px 0 10px;
+            text-align: justify;
+        }
+
+        ul, ol {
+            margin: 6px 0 12px 22px;
+            text-align: justify;
+        }
+
+        strong {
+            color: #000;
+        }
+
+        figure {
+            border: 1px solid var(--cor-borda);
+            background: #fafafa;
+            padding: 10px;
+            margin: 14px 0;
+        }
+
+        figure img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            margin: 0 auto 6px;
+        }
+
+        figure figcaption {
+            font-size: 0.85rem;
+            color: #555;
+            text-align: center;
+        }
+
+        .quadro {
+            border-left: 4px solid var(--cor-primaria);
+            background: #f1f8e9;
+            padding: 10px 12px;
+            margin: 12px 0;
+            font-size: 0.95rem;
+        }
+
+        .quadro strong {
+            color: #1b5e20;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 12px 0;
+            font-size: 0.95rem;
+        }
+
+        table thead {
+            background: var(--cor-tabela-header);
+        }
+
+        table th,
+        table td {
+            border: 1px solid var(--cor-borda);
+            padding: 6px 8px;
+            text-align: left;
+        }
+
+        table th {
+            font-weight: bold;
+        }
+
+        .nota {
+            font-size: 0.85rem;
+            color: #555;
+            margin-top: -4px;
+            margin-bottom: 10px;
+            text-align: justify;
+        }
+
+        @media (max-width: 700px) {
+            .container {
+                padding: 16px 10px 30px;
+            }
+
+            header h1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <header>
+        <h1>Google Planilhas</h1>
+        <p>Introdução – Ambiente, edição básica, formatação e referências.</p>
+    </header>
+
+    <!-- INTRODUÇÃO -->
+    <section id="introducao">
+        <h2>1. Introdução ao Google Planilhas</h2>
+
+        <p>
+            O <strong>Google Planilhas</strong> é uma ferramenta de planilha eletrônica online que permite criar,
+            editar e compartilhar arquivos diretamente no navegador, sem necessidade de instalação local.
+            Basta possuir uma conta Google e conexão com a internet para acessar os recursos da ferramenta
+            em qualquer dispositivo (computador, tablet ou smartphone).
+        </p>
+
+        <p>
+            Integrado ao <strong>Google Drive</strong>, o Google Planilhas faz parte do conjunto de aplicativos
+            Google Apps e funciona como um “disco virtual” na nuvem, em que os arquivos são salvos
+            automaticamente, com histórico de versões e possibilidade de colaboração em tempo real entre
+            vários usuários.
+        </p>
+
+        <div class="quadro">
+            <strong>Principais possibilidades do Google Planilhas:</strong>
+            <ul>
+                <li>Realizar cálculos matemáticos, lógicos e estatísticos, inclusive complexos.</li>
+                <li>Automatizar tarefas de cálculo utilizando fórmulas e funções prontas.</li>
+                <li>Organizar e analisar dados em formato de tabela.</li>
+                <li>Gerar gráficos diversos a partir dos dados da planilha.</li>
+                <li>Compartilhar e editar arquivos em tempo real com outros usuários.</li>
+                <li>Acessar as planilhas a partir de qualquer lugar com internet.</li>
+            </ul>
+        </div>
+
+        <h3>1.1 Como acessar o Google Planilhas</h3>
+
+        <p>
+            Para utilizar o Google Planilhas, o usuário precisa:
+        </p>
+        <ul>
+            <li>possuir uma <strong>conta Gmail</strong> (ou conta Google associada);</li>
+            <li>ter um navegador de internet instalado;</li>
+            <li>estar conectado à internet.</li>
+        </ul>
+
+        <h4>1.1.1 Login no Gmail</h4>
+
+        <figure>
+            <img src="imagens/login-gmail.png" alt="Tela de login do Gmail" />
+            <figcaption>Figura 1 – Login do Gmail para acesso ao Google Planilhas.</figcaption>
+        </figure>
+
+        <p>
+            O primeiro passo é acessar o endereço do Gmail, informar e-mail e senha e realizar o login.
+            A partir dessa conta será possível acessar todos os aplicativos da suíte Google, incluindo o
+            Google Planilhas.
+        </p>
+
+        <h4>1.1.2 Acessando o Google Planilhas pelo Google Apps</h4>
+
+        <figure>
+            <img src="imagens/google-apps-planilhas.png" alt="Acesso ao Google Planilhas pelo menu Google Apps" />
+            <figcaption>Figura 2 – Acesso ao Google Planilhas via menu Google Apps.</figcaption>
+        </figure>
+
+        <p>
+            Após o login, no canto superior direito da tela do Gmail, está disponível o ícone
+            <strong>Google Apps</strong> (grade de nove pontos). Clicando nesse ícone, é exibida uma lista de
+            aplicativos. Basta selecionar o ícone <strong>Planilhas</strong> para abrir o ambiente do Google Planilhas.
+        </p>
+
+        <h4>1.1.3 Criar ou abrir uma planilha</h4>
+
+        <figure>
+            <img src="imagens/pagina-escolha-planilha.png" alt="Página inicial do Google Planilhas com modelos" />
+            <figcaption>Figura 3 – Página inicial para criação, seleção ou importação de planilhas.</figcaption>
+        </figure>
+
+        <p>
+            Na página inicial do Google Planilhas, o usuário pode:
+        </p>
+        <ul>
+            <li>criar uma planilha em branco;</li>
+            <li>escolher um modelo pronto (orçamento, lista de tarefas, etc.);</li>
+            <li>abrir uma planilha salva no Google Drive;</li>
+            <li>importar uma planilha já existente do computador ou do smartphone.</li>
+        </ul>
+
+        <h3>1.2 Estrutura geral da planilha</h3>
+
+        <p>
+            Assim como outras planilhas eletrônicas, o Google Planilhas organiza os dados em uma
+            <strong>matriz bidimensional</strong>, formada por linhas (na horizontal) e colunas (na vertical).
+            O cruzamento entre uma linha e uma coluna define uma <strong>célula</strong>, que é a unidade básica
+            onde os dados são armazenados.
+        </p>
+
+        <figure>
+            <img src="imagens/linhas-colunas-intro.png" alt="Linhas e colunas na planilha" />
+            <figcaption>Figura 4 – Referência de linhas (números) e colunas (letras) em uma planilha.</figcaption>
+        </figure>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Elemento</th>
+                    <th>Referência</th>
+                    <th>Descrição</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Linha</td>
+                    <td>1, 2, 3, ...</td>
+                    <td>Conjunto de células na horizontal, identificado por números.</td>
+                </tr>
+                <tr>
+                    <td>Coluna</td>
+                    <td>A, B, C, ...</td>
+                    <td>Conjunto de células na vertical, identificado por letras maiúsculas.</td>
+                </tr>
+                <tr>
+                    <td>Célula</td>
+                    <td>ex.: B4</td>
+                    <td>Interseção entre a coluna B e a linha 4; unidade básica de inserção de dados.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p class="nota">
+            O entendimento dessa estrutura é essencial para o uso de fórmulas e funções, pois todos os
+            cálculos fazem referência a endereços de células ou intervalos.
+        </p>
+
+        <h3>1.3 Barra de Menus e Barra de Ferramentas</h3>
+
+        <figure>
+            <img src="imagens/menus-ferramentas-intro.png" alt="Barra de menus e barra de ferramentas no Google Planilhas" />
+            <figcaption>Figura 5 – Barra de menus, barra de ferramentas e barra de fórmulas.</figcaption>
+        </figure>
+
+        <p>
+            O Google Planilhas apresenta uma interface simples e prática, com uma <strong>barra de menus</strong>
+            na parte superior (Arquivo, Editar, Ver, Inserir, Formatar, Dados, Ferramentas, Extensões e Ajuda)
+            e logo abaixo uma <strong>barra de ferramentas</strong> com comandos rápidos para formatação e edição.
+        </p>
+
+        <p>
+            A <strong>barra de fórmulas</strong> é um elemento de grande importância: é nela que o usuário pode
+            inserir fórmulas personalizadas e utilizar funções prontas da ferramenta.
+        </p>
+
+    </section>
+
+    <!-- AULA 1 -->
+    <section id="aula-1">
+        <h2>Aula 1 – Área de Trabalho do Google Planilhas</h2>
+
+        <p>
+            Nesta aula o objetivo é aprofundar o conhecimento sobre a interface do Google Planilhas,
+            identificando com mais detalhes os elementos da área de trabalho: página inicial, menus,
+            faixa de ferramentas, linhas, colunas, células, abas de planilha e painel lateral.
+        </p>
+
+        <h3>2. Área de Trabalho do Google Planilhas</h3>
+
+        <figure>
+            <img src="imagens/area-trabalho.png" alt="Área de trabalho do Google Planilhas" />
+            <figcaption>Figura 6 – Visão geral da área de trabalho do Google Planilhas.</figcaption>
+        </figure>
+
+        <h4>2.1 Título e Status da Planilha</h4>
+
+        <table>
+            <thead>
+            <tr>
+                <th>Elemento</th>
+                <th>Função</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Título da planilha</td>
+                <td>Nome do arquivo; pode ser alterado a qualquer momento clicando sobre o texto.</td>
+            </tr>
+            <tr>
+                <td>Status</td>
+                <td>Indica se o arquivo está salvo, se foi movido, favoritado (estrela) ou editado recentemente.</td>
+            </tr>
+            <tr>
+                <td>Última edição</td>
+                <td>Mostra quem fez a última modificação e em que momento.</td>
+            </tr>
+            </tbody>
+        </table>
+
+        <h4>2.2 Comentários, Compartilhamento e Conta Google</h4>
+
+        <table>
+            <thead>
+            <tr>
+                <th>Ícone / Área</th>
+                <th>Função</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Comentários</td>
+                <td>Acessa o histórico de comentários e permite inserir novas anotações.</td>
+            </tr>
+            <tr>
+                <td>Google Meet</td>
+                <td>Abre uma chamada de videoconferência associada à planilha.</td>
+            </tr>
+            <tr>
+                <td>Compartilhar</td>
+                <td>Define quem pode visualizar, comentar ou editar o arquivo.</td>
+            </tr>
+            <tr>
+                <td>Conta Google</td>
+                <td>Exibe a conta ativa e permite alternar entre usuários.</td>
+            </tr>
+            </tbody>
+        </table>
+
+        <h4>2.3 Barra de Menus</h4>
+
+        <div class="quadro">
+            <strong>Principais menus e exemplos de funções:</strong>
+        </div>
+
+        <table>
+            <thead>
+            <tr>
+                <th>Menu</th>
+                <th>Exemplos de opções</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Arquivo</td>
+                <td>Criar, abrir, imprimir, baixar, renomear, mover para o Drive.</td>
+            </tr>
+            <tr>
+                <td>Editar</td>
+                <td>Desfazer, refazer, copiar, colar, buscar e substituir.</td>
+            </tr>
+            <tr>
+                <td>Ver</td>
+                <td>Zoom, congelar linhas/colunas, mostrar/ocultar grade.</td>
+            </tr>
+            <tr>
+                <td>Inserir</td>
+                <td>Linhas, colunas, gráficos, imagens, funções, notas.</td>
+            </tr>
+            <tr>
+                <td>Formatar</td>
+                <td>Fonte, cor, alinhamento, bordas, estilos de número.</td>
+            </tr>
+            <tr>
+                <td>Dados</td>
+                <td>Classificar, filtrar, validar dados, remover duplicatas.</td>
+            </tr>
+            <tr>
+                <td>Ferramentas</td>
+                <td>Formulário, macros, ortografia, acessibilidade.</td>
+            </tr>
+            <tr>
+                <td>Extensões / Ajuda</td>
+                <td>Complementos, scripts, suporte e documentação.</td>
+            </tr>
+            </tbody>
+        </table>
+
+        <h4>2.4 Faixa de Ferramentas</h4>
+
+        <figure>
+            <img src="imagens/faixa-ferramentas.png" alt="Faixa de ferramentas do Google Planilhas" />
+            <figcaption>Figura 7 – Faixa de ferramentas com comandos rápidos.</figcaption>
+        </figure>
+
+        <p>
+            A faixa de ferramentas reúne atalhos para ações de formatação e edição, como:
+            negrito, itálico, cores, bordas, alinhamento, mesclagem de células, formatação
+            de números, entre outros.
+        </p>
+
+        <h4>2.5 Estrutura da Planilha: Linhas, Colunas e Células</h4>
+
+        <figure>
+            <img src="imagens/linhas-colunas.png" alt="Linhas, colunas e célula ativa" />
+            <figcaption>Figura 8 – Linhas, colunas, célula ativa e intervalo de células.</figcaption>
+        </figure>
+
+        <table>
+            <thead>
+            <tr>
+                <th>Elemento</th>
+                <th>Descrição</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Linhas</td>
+                <td>Dispostas na horizontal e identificadas por números (1, 2, 3...).</td>
+            </tr>
+            <tr>
+                <td>Colunas</td>
+                <td>Dispostas na vertical e identificadas por letras (A, B, C...).</td>
+            </tr>
+            <tr>
+                <td>Célula</td>
+                <td>Interseção entre linha e coluna, unidade básica de armazenamento de dados.</td>
+            </tr>
+            <tr>
+                <td>Célula ativa</td>
+                <td>Célula selecionada, com borda em destaque, pronta para receber dados.</td>
+            </tr>
+            <tr>
+                <td>Intervalo</td>
+                <td>Conjunto de duas ou mais células, indicado, por exemplo, como A1:C3.</td>
+            </tr>
+            </tbody>
+        </table>
+
+        <h4>2.6 Abas de Planilha (Páginas)</h4>
+
+        <figure>
+            <img src="imagens/abas-planilha.png" alt="Abas e controle de páginas" />
+            <figcaption>Figura 9 – Abas de planilha e controle de páginas.</figcaption>
+        </figure>
+
+        <p>
+            As abas permitem dividir o arquivo em várias planilhas internas. É possível renomear,
+            mover, duplicar e excluir abas, além de adicionar novas páginas conforme a necessidade
+            da organização dos dados.
+        </p>
+
+        <h4>2.7 Painel Lateral e Recurso Explorar</h4>
+
+        <figure>
+            <img src="imagens/painel-explorar.png" alt="Painel lateral e recurso Explorar" />
+            <figcaption>Figura 10 – Painel lateral com o recurso Explorar.</figcaption>
+        </figure>
+
+        <p>
+            O painel lateral, acessado pelo botão <em>Explorar</em>, oferece sugestões automáticas de
+            gráficos, análises e operações rápidas, com base no conteúdo existente na planilha.
+        </p>
+    </section>
+
+    <!-- AULA 2 -->
+    <section id="aula-2">
+        <h2>Aula 2 – Estrutura Básica, Navegação e Edição de Dados</h2>
+
+        <p>
+            Nesta aula o foco é compreender a Caixa de Nome, a Barra de Fórmulas e os principais
+            comandos de movimentação do cursor, além das operações básicas de edição, inserção e
+            exclusão de dados, linhas e colunas.
+        </p>
+
+        <h3>3. Caixa de Nome</h3>
+
+        <figure>
+            <img src="imagens/caixa-nome.png" alt="Caixa de Nome do Google Planilhas" />
+            <figcaption>Figura 11 – Caixa de Nome exibindo o endereço da célula ativa.</figcaption>
+        </figure>
+
+        <p>
+            A <strong>Caixa de Nome</strong>, localizada acima da planilha, exibe o endereço da célula ativa,
+            por exemplo, B4. Ela também pode ser usada para nomear intervalos, facilitando o uso de
+            fórmulas mais complexas.
+        </p>
+
+        <h3>4. Barra de Fórmulas</h3>
+
+        <p>
+            A <strong>Barra de Fórmulas</strong> permite inserir ou editar textos, números, fórmulas e funções,
+            sem a necessidade de digitar diretamente dentro da célula. Esse recurso é especialmente
+            útil quando as fórmulas são longas ou precisam ser revisadas.
+        </p>
+
+        <h3>5. Movimentação do Cursor</h3>
+
+        <p>
+            A navegação eficiente pela planilha é fundamental para trabalhar com grandes quantidades
+            de dados. O cursor pode ser movimentado com o mouse ou com o teclado.
+        </p>
+
+        <h4>5.1 Movimentação com o Mouse</h4>
+
+        <p>
+            Basta clicar sobre a célula desejada para selecioná-la. É um método intuitivo, indicado para
+            navegação em regiões menores da planilha.
+        </p>
+
+        <h4>5.2 Movimentação com o Teclado</h4>
+
+        <p>
+            O teclado oferece maior agilidade, principalmente quando há grande volume de dados.
+        </p>
+
+        <table>
+            <thead>
+            <tr>
+                <th>Atalho</th>
+                <th>Ação</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Setas (↑ ↓ ← →)</td>
+                <td>Move o cursor para a célula vizinha na direção escolhida.</td>
+            </tr>
+            <tr>
+                <td>Enter</td>
+                <td>Confirma a edição e desce para a célula abaixo.</td>
+            </tr>
+            <tr>
+                <td>Shift + Enter</td>
+                <td>Confirma a edição e sobe para a célula acima.</td>
+            </tr>
+            <tr>
+                <td>Tab</td>
+                <td>Confirma e avança uma célula à direita.</td>
+            </tr>
+            <tr>
+                <td>Shift + Tab</td>
+                <td>Confirma e retorna uma célula à esquerda.</td>
+            </tr>
+            <tr>
+                <td>Ctrl + Setas</td>
+                <td>Vai até o limite dos dados contínuos (topo, base, esquerda ou direita).</td>
+            </tr>
+            <tr>
+                <td>Ctrl + Home</td>
+                <td>Retorna para a célula A1 da planilha.</td>
+            </tr>
+            <tr>
+                <td>F2</td>
+                <td>Entra em modo de edição na célula selecionada.</td>
+            </tr>
+            <tr>
+                <td>Esc</td>
+                <td>Cancela a edição atual, mantendo o conteúdo anterior.</td>
+            </tr>
+            </tbody>
+        </table>
+
+        <h3>6. Adição e Exclusão de Dados</h3>
+
+        <div class="quadro">
+            <strong>Adicionar dados:</strong>
+            <ul>
+                <li>Selecione a célula e digite o conteúdo desejado.</li>
+                <li>ou digite diretamente na Barra de Fórmulas e pressione Enter.</li>
+                <li>ou cole dados copiados de outra fonte.</li>
+            </ul>
+            <strong>Excluir dados:</strong>
+            <ul>
+                <li>Selecione a célula ou intervalo de células.</li>
+                <li>Pressione a tecla <em>Delete</em>.</li>
+            </ul>
+        </div>
+
+        <h3>7. Redimensionamento de Linhas e Colunas</h3>
+
+        <figure>
+            <img src="imagens/redimensionar.png" alt="Redimensionar linhas e colunas" />
+            <figcaption>Figura 12 – Ajuste de largura e altura de linhas e colunas.</figcaption>
+        </figure>
+
+        <p>
+            Para ajustar o tamanho de linhas e colunas, é possível:
+        </p>
+        <ul>
+            <li>arrastar a borda entre duas linhas ou colunas;</li>
+            <li>dar duplo clique na borda para ajuste automático ao conteúdo;</li>
+            <li>usar o menu de contexto (botão direito) e escolher “Redimensionar”.</li>
+        </ul>
+
+        <h3>8. Inserir e Excluir Linhas e Colunas</h3>
+
+        <figure>
+            <img src="imagens/inserir-excluir-linhas-colunas.png" alt="Inserir e excluir linhas e colunas" />
+            <figcaption>Figura 13 – Opções para inserção e exclusão de linhas e colunas.</figcaption>
+        </figure>
+
+        <p>
+            Com o botão direito do mouse sobre o cabeçalho de uma linha ou coluna é possível:
+        </p>
+        <ul>
+            <li>inserir linhas acima ou abaixo da linha selecionada;</li>
+            <li>inserir colunas à esquerda ou à direita da coluna selecionada;</li>
+            <li>excluir linhas ou colunas selecionadas.</li>
+        </ul>
+    </section>
+
+    <!-- AULA 3 -->
+    <section id="aula-3">
+        <h2>Aula 3 – Formatação, Edição Avançada e Referências</h2>
+
+        <p>
+            Nesta aula, o foco está nos comandos de edição mais avançados (como o uso da tecla F2),
+            nas principais opções de formatação de texto, grade e números, além da introdução aos
+            tipos de referências de células utilizadas em fórmulas.
+        </p>
+
+        <h3>9. Comandos de Edição (F2)</h3>
+
+        <p>
+            A tecla <strong>F2</strong> coloca a célula em modo de edição, permitindo alterar apenas parte do
+            conteúdo, sem sobrescrevê-lo completamente.
+        </p>
+
+        <table>
+            <thead>
+            <tr>
+                <th>Comando</th>
+                <th>Função</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>F2</td>
+                <td>Entra no modo de edição da célula selecionada.</td>
+            </tr>
+            <tr>
+                <td>Enter</td>
+                <td>Confirma a edição realizada.</td>
+            </tr>
+            <tr>
+                <td>Esc</td>
+                <td>Cancela a edição em andamento.</td>
+            </tr>
+            <tr>
+                <td>Ctrl + C / Ctrl + V / Ctrl + X</td>
+                <td>Copiar, colar e recortar o conteúdo de células.</td>
+            </tr>
+            <tr>
+                <td>Ctrl + Z / Ctrl + Y</td>
+                <td>Desfazer e refazer ações.</td>
+            </tr>
+            </tbody>
+        </table>
+
+        <h3>10. Formatação de Texto</h3>
+
+        <div class="quadro">
+            <strong>Principais opções de formatação de texto:</strong>
+            <ul>
+                <li>Tipo de fonte e tamanho.</li>
+                <li>Negrito, itálico e tachado.</li>
+                <li>Cor do texto.</li>
+                <li>Cor de preenchimento (fundo da célula).</li>
+            </ul>
+        </div>
+
+        <h3>11. Formatação da Grade</h3>
+
+        <figure>
+            <img src="imagens/formatacao-grade.png" alt="Formatação da grade de células" />
+            <figcaption>Figura 14 – Bordas, mesclagem e alinhamentos.</figcaption>
+        </figure>
+
+        <p>Entre as principais ações de formatação da grade estão:</p>
+        <ul>
+            <li>aplicar bordas internas e externas às células;</li>
+            <li>mesclar células para formar títulos ou blocos;</li>
+            <li>ajustar o alinhamento horizontal e vertical;</li>
+            <li>rotacionar texto (vertical, inclinado, etc.);</li>
+            <li>ativar o ajuste automático de texto dentro da célula;</li>
+            <li>usar cores alternadas para destacar linhas de uma tabela.</li>
+        </ul>
+
+        <h3>12. Formatação de Números</h3>
+
+        <p>
+            A formatação de números é essencial para que os dados apareçam de forma coerente com o
+            tipo de informação que representam.
+        </p>
+
+        <table>
+            <thead>
+            <tr>
+                <th>Tipo</th>
+                <th>Exemplo</th>
+                <th>Uso típico</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Número</td>
+                <td>1234</td>
+                <td>Valores gerais sem símbolo monetário.</td>
+            </tr>
+            <tr>
+                <td>Financeiro</td>
+                <td>R$ 1.234,00</td>
+                <td>Valores em moeda, com símbolo de real.</td>
+            </tr>
+            <tr>
+                <td>Porcentagem</td>
+                <td>25%</td>
+                <td>Taxas, índices e percentuais.</td>
+            </tr>
+            <tr>
+                <td>Data</td>
+                <td>12/03/2025</td>
+                <td>Registro de dias, meses e anos.</td>
+            </tr>
+            <tr>
+                <td>Hora</td>
+                <td>14:30</td>
+                <td>Horários ou duração.</td>
+            </tr>
+            <tr>
+                <td>Científico</td>
+                <td>1,23E+05</td>
+                <td>Notação científica para números muito grandes ou muito pequenos.</td>
+            </tr>
+            </tbody>
+        </table>
+
+        <h3>13. Referências de Células</h3>
+
+        <p>
+            As referências de células são utilizadas em fórmulas para indicar de onde vêm os dados.
+            Quando uma fórmula é copiada para outras células, o comportamento da referência determina
+            se o endereço será ajustado ou permanecerá fixo.
+        </p>
+
+        <table>
+            <thead>
+            <tr>
+                <th>Tipo de referência</th>
+                <th>Exemplo</th>
+                <th>Comportamento ao copiar a fórmula</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Relativa</td>
+                <td>A1</td>
+                <td>Altera automaticamente conforme a posição da nova célula.</td>
+            </tr>
+            <tr>
+                <td>Absoluta</td>
+                <td>$A$1</td>
+                <td>Permanece sempre apontando para a mesma célula, independentemente de onde a fórmula é copiada.</td>
+            </tr>
+            <tr>
+                <td>Mista (linha fixa)</td>
+                <td>A$1</td>
+                <td>A coluna pode mudar; a linha permanece fixa.</td>
+            </tr>
+            <tr>
+                <td>Mista (coluna fixa)</td>
+                <td>$A1</td>
+                <td>A coluna permanece fixa; a linha pode mudar.</td>
+            </tr>
+            </tbody>
+        </table>
+
+        <p class="nota">
+            A compreensão dos tipos de referência é fundamental para o uso eficiente de fórmulas e funções
+            nas próximas aulas, que tratarão de operadores de cálculo e funções como SOMA, MÉDIA, MÁXIMO,
+            MÍNIMO, SOMASE, CONT.SE, entre outras.
+        </p>
+    </section>
+
+</div>
+</body>
+</html>
