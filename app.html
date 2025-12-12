@@ -6,177 +6,151 @@
   <title>Apostila - Google Slides (Google Apresentações)</title>
 
   <style>
-    :root{
-      --cor-primaria: #0f6a3e;
-      --cor-secundaria: #1a73e8;
-      --cor-fundo: #ffffff;
-      --cor-texto: #1f1f1f;
-      --cor-card-fundo: #f7f9fb;
-      --cor-borda: #d6dde6;
-      --cor-borda-suave: #e6ebf2;
-      --cor-destaque: #e8f3ed;
-      --cor-alerta: #fff6e5;
-      --cor-cinza: #6b7280;
+        :root {
+            --cor-fundo: #f7f7f7;
+            --cor-primaria: #1b5e20;
+            --cor-secundaria: #2e7d32;
+            --cor-borda: #cccccc;
+            --cor-tabela-header: #e8f5e9;
+        }
 
-      --largura-max: 980px;
-      --esp-lateral: 22px;
-      --raio: 10px;
-      --sombra: 0 2px 10px rgba(0,0,0,0.06);
-    }
+        * {
+            box-sizing: border-box;
+        }
 
-    *{ box-sizing: border-box; }
-    body{
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      color: var(--cor-texto);
-      background: var(--cor-fundo);
-      line-height: 1.65;
-    }
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: var(--cor-fundo);
+            color: #222;
+            line-height: 1.6;
+        }
 
-    header{
-      background: linear-gradient(90deg, rgba(15,106,62,0.12), rgba(26,115,232,0.10));
-      border-bottom: 1px solid var(--cor-borda);
-      padding: 26px var(--esp-lateral);
-    }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px 16px 40px;
+            background: #ffffff;
+        }
 
-    main{
-padding: 14px var(--esp-lateral) 22px;
-    }
+        header {
+            border-bottom: 4px solid var(--cor-primaria);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
 
-    h1{
-      margin: 0 0 8px;
-      font-size: 1.65rem;
-      color: var(--cor-primaria);
-      letter-spacing: 0.2px;
-    }
-    header p{
-      margin: 0;
-      color: #2b2b2b;
-      max-width: 70ch;
-    }
+        header h1 {
+            margin: 0;
+            color: var(--cor-primaria);
+            font-size: 1.8rem;
+        }
 
-    nav{
-      margin: 18px 0 0;
-      padding: 12px 14px;
-      background: var(--cor-card-fundo);
-      border: 1px solid var(--cor-borda);
-      border-radius: var(--raio);
-      box-shadow: var(--sombra);
-    }
-    nav h2{
-      margin: 0 0 10px;
-      font-size: 1.05rem;
-      color: var(--cor-secundaria);
-    }
-    nav ol{
-      margin: 0;
-      padding-left: 20px;
-      columns: 1;
-    }
-    nav a{
-      color: var(--cor-texto);
-      text-decoration: none;
-    }
-    nav a:hover{
-      text-decoration: underline;
-      color: var(--cor-secundaria);
-    }
+        header p {
+            margin: 4px 0 0;
+            font-size: 0.95rem;
+            color: #555;
+        }
 
-    section{
-      background: var(--cor-card-fundo);
-	  padding: 18px;
-      margin: 14px 0;
-    padding: 16px;
-    border-left-width: 4px;
-      border: 1px solid var(--cor-borda);
-     
-      box-shadow: var(--sombra);
-      margin: 1px 0;
-      transition: transform 0.15s ease;
-    }
-    section:hover{ transform: translateY(-1px); }
+        h2, h3, h4 {
+            color: var(--cor-secundaria);
+            margin-top: 24px;
+            margin-bottom: 8px;
+        }
 
-    h2{
-      margin: 0 0 12px;
-      font-size: 1.28rem;
-      color: var(--cor-primaria);
-    }
-    h3{
-      margin: 14px 0 8px;
-      font-size: 1.06rem;
-      color: #164b31;
-    }
+        p {
+            margin: 6px 0 10px;
+            text-align: justify;
+        }
 
-    p{ margin: 0 0 10px; text-align: justify; }
+        ul, ol {
+            margin: 6px 0 12px 22px;
+            text-align: justify;
+        }
 
-    ul, ol{
-      margin: 0 0 12px;
-      padding-left: 22px;
-    }
+        strong {
+            color: #000;
+        }
 
-    .dica, .atencao, .objetivo{
-      border-radius: var(--raio);
-      padding: 12px 14px;
-      border: 1px solid var(--cor-borda);
-      margin: 12px 0;
-    }
+        figure {
+            border: 1px solid var(--cor-borda);
+            background: #fafafa;
+            padding: 10px;
+            margin: 14px 0;
+        }
 
-    .objetivo{
-      background: var(--cor-destaque);
-      border-color: #b9dec9;
-    }
-    .dica{
-      background: #eef5ff;
-      border-color: #cfe0ff;
-    }
-    .atencao{
-      background: var(--cor-alerta);
-      border-color: #ffe1a8;
-    }
+        figure img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            margin: 0 auto 6px;
+        }
 
-    figure{
-      border: 1px solid var(--cor-borda);
-      background: #fafafa;
-      padding: 10px;
-      margin: 14px 0;
-      border-radius: var(--raio);
-    }
-    figure img{
-      display: block;
-      max-width: 100%;
-      height: auto;
-      margin: 0 auto 6px;
-      border-radius: 8px;
-    }
-    figure figcaption{
-      font-size: 0.9rem;
-      color: var(--cor-cinza);
-      text-align: center;
-      margin: 0;
-    }
+        figure figcaption {
+            font-size: 0.85rem;
+            color: #555;
+            text-align: center;
+        }
 
-    .mini{
-      font-size: 0.92rem;
-      color: var(--cor-cinza);
-    }
+        .quadro {
+            border-left: 4px solid var(--cor-primaria);
+            background: #f1f8e9;
+            padding: 10px 12px;
+            margin: 12px 0;
+            font-size: 0.95rem;
+        }
 
-    footer{
-      max-width: var(--largura-max);
-      margin: 0 auto;
-      padding: 0 var(--esp-lateral) 30px;
-      color: var(--cor-cinza);
-      font-size: 0.9rem;
-    }
+        .quadro strong {
+            color: #1b5e20;
+        }
 
-    code{
-      background: #f0f2f4;
-      padding: 2px 6px;
-      border-radius: 6px;
-      border: 1px solid #e1e6ec;
-    }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 12px 0;
+            font-size: 0.95rem;
+        }
+
+        table thead {
+            background: var(--cor-tabela-header);
+        }
+
+        table th,
+        table td {
+            border: 1px solid var(--cor-borda);
+            padding: 6px 8px;
+            text-align: left;
+        }
+
+        table th {
+            font-weight: bold;
+        }
+
+        .nota {
+            font-size: 0.85rem;
+            color: #555;
+            margin-top: -4px;
+            margin-bottom: 10px;
+            text-align: justify;
+        }
+
+        @media (max-width: 700px) {
+            .container {
+                padding: 16px 10px 30px;
+            }
+
+            header h1 {
+                font-size: 1.5rem;
+            }
+        }
   </style>
 </head>
-
+<body>
+<div class="container">
+    <header>
+        <h1>Google Slides</h1>
+        <p>Introdução – Ambiente, edição básica, formatação e referências.</p>
+    </header>
 <body>
   <main>
     <section id="cap1">
@@ -189,7 +163,7 @@ padding: 14px var(--esp-lateral) 22px;
       </p>
 
       <figure>
-        <img src="google.png" alt="Ícones do Google Docs, Sheets, Slides e Forms" />
+        <img src="imagens/cap1_suite_google.png" alt="Ícones do Google Docs, Sheets, Slides e Forms" />
         <figcaption>Figura 1 — Sugestão: ícones do pacote Google Documentos (Docs, Planilhas, Apresentações e Formulários).</figcaption>
       </figure>
 
@@ -459,6 +433,7 @@ padding: 14px var(--esp-lateral) 22px;
       <span class="mini">Sugestão: manter as imagens na pasta <code>imagens/</code> e nomear conforme os exemplos do arquivo.</span>
     </p>
   </footer>
+
+</div>
 </body>
 </html>
-
