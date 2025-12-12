@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apostila - Google Slides (Google Apresentações)</title>
+
+  <style>
+    :root{
+      --cor-primaria: #0f6a3e;
+      --cor-secundaria: #1a73e8;
+      --cor-fundo: #ffffff;
+      --cor-texto: #1f1f1f;
+      --cor-card-fundo: #f7f9fb;
+      --cor-borda: #d6dde6;
+      --cor-borda-suave: #e6ebf2;
+      --cor-destaque: #e8f3ed;
+      --cor-alerta: #fff6e5;
+      --cor-cinza: #6b7280;
+
+      --largura-max: 980px;
+      --esp-lateral: 22px;
+      --raio: 10px;
+      --sombra: 0 2px 10px rgba(0,0,0,0.06);
+    }
+
+    *{ box-sizing: border-box; }
+    body{
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--cor-texto);
+      background: var(--cor-fundo);
+      line-height: 1.65;
+    }
+
+    header{
+      background: linear-gradient(90deg, rgba(15,106,62,0.12), rgba(26,115,232,0.10));
+      border-bottom: 1px solid var(--cor-borda);
+      padding: 26px var(--esp-lateral);
+    }
+
+    main{
+padding: 14px var(--esp-lateral) 22px;
+    }
+
+    h1{
+      margin: 0 0 8px;
+      font-size: 1.65rem;
+      color: var(--cor-primaria);
+      letter-spacing: 0.2px;
+    }
+    header p{
+      margin: 0;
+      color: #2b2b2b;
+      max-width: 70ch;
+    }
+
+    nav{
+      margin: 18px 0 0;
+      padding: 12px 14px;
+      background: var(--cor-card-fundo);
+      border: 1px solid var(--cor-borda);
+      border-radius: var(--raio);
+      box-shadow: var(--sombra);
+    }
+    nav h2{
+      margin: 0 0 10px;
+      font-size: 1.05rem;
+      color: var(--cor-secundaria);
+    }
+    nav ol{
+      margin: 0;
+      padding-left: 20px;
+      columns: 1;
+    }
+    nav a{
+      color: var(--cor-texto);
+      text-decoration: none;
+    }
+    nav a:hover{
+      text-decoration: underline;
+      color: var(--cor-secundaria);
+    }
+
+    section{
+      background: var(--cor-card-fundo);
+	  padding: 18px;
+      margin: 14px 0;
+    padding: 16px;
+    border-left-width: 4px;
+      border: 1px solid var(--cor-borda);
+     
+      box-shadow: var(--sombra);
+      margin: 1px 0;
+      transition: transform 0.15s ease;
+    }
+    section:hover{ transform: translateY(-1px); }
+
+    h2{
+      margin: 0 0 12px;
+      font-size: 1.28rem;
+      color: var(--cor-primaria);
+    }
+    h3{
+      margin: 14px 0 8px;
+      font-size: 1.06rem;
+      color: #164b31;
+    }
+
+    p{ margin: 0 0 10px; text-align: justify; }
+
+    ul, ol{
+      margin: 0 0 12px;
+      padding-left: 22px;
+    }
+
+    .dica, .atencao, .objetivo{
+      border-radius: var(--raio);
+      padding: 12px 14px;
+      border: 1px solid var(--cor-borda);
+      margin: 12px 0;
+    }
+
+    .objetivo{
+      background: var(--cor-destaque);
+      border-color: #b9dec9;
+    }
+    .dica{
+      background: #eef5ff;
+      border-color: #cfe0ff;
+    }
+    .atencao{
+      background: var(--cor-alerta);
+      border-color: #ffe1a8;
+    }
+
+    figure{
+      border: 1px solid var(--cor-borda);
+      background: #fafafa;
+      padding: 10px;
+      margin: 14px 0;
+      border-radius: var(--raio);
+    }
+    figure img{
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin: 0 auto 6px;
+      border-radius: 8px;
+    }
+    figure figcaption{
+      font-size: 0.9rem;
+      color: var(--cor-cinza);
+      text-align: center;
+      margin: 0;
+    }
+
+    .mini{
+      font-size: 0.92rem;
+      color: var(--cor-cinza);
+    }
+
+    footer{
+      max-width: var(--largura-max);
+      margin: 0 auto;
+      padding: 0 var(--esp-lateral) 30px;
+      color: var(--cor-cinza);
+      font-size: 0.9rem;
+    }
+
+    code{
+      background: #f0f2f4;
+      padding: 2px 6px;
+      border-radius: 6px;
+      border: 1px solid #e1e6ec;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <section id="cap1">
+      <h2>Introdução ao Google Slides</h2>
+      <p>
+        O <strong>Google Slides</strong> (Google Apresentações) é o editor de apresentações do pacote Google Documentos.
+        Ele permite criar, editar e compartilhar slides on-line, com salvamento automático na nuvem por meio do
+        <strong>Google Drive</strong>. Também é possível trabalhar de forma colaborativa, com várias pessoas editando
+        a mesma apresentação em tempo real.
+      </p>
+
+      <figure>
+        <img src="imagens/cap1_suite_google.png" alt="Ícones do Google Docs, Sheets, Slides e Forms" />
+        <figcaption>Figura 1 — Sugestão: ícones do pacote Google Documentos (Docs, Planilhas, Apresentações e Formulários).</figcaption>
+      </figure>
+
+      <h2>Acesso ao Google Slides e Conta Google</h2>
+
+      <p>
+        Para utilizar o Google Slides, é necessário possuir uma <strong>Conta do Google</strong>. Caso não tenha,
+        crie uma conta seguindo as etapas de cadastro indicadas pelo Google. Após isso, realize o login no navegador.
+      </p>
+
+      <div class="dica">
+        <strong>Dica:</strong> utilize preferencialmente o navegador <strong>Google Chrome</strong> para melhor compatibilidade.
+      </div>
+
+      <h3>Passo a passo</h3>
+      <ol>
+        <li>Abra o navegador <strong>Google Chrome</strong>.</li>
+        <li>Faça login em sua <strong>Conta do Google</strong>.</li>
+        <li>No canto superior direito, clique no ícone <strong>Google Apps</strong> (nove pontos).</li>
+        <li>Localize o ícone <strong>Apresentações</strong> e clique para abrir o Google Slides.</li>
+      </ol>
+
+      <figure>
+        <img src="imagens/cap2_google_apps.png" alt="Ícone Google Apps e opção Apresentações" />
+        <figcaption>Figura 2 — Sugestão: destaque para o ícone Google Apps e o atalho “Apresentações”.</figcaption>
+      </figure>
+	  
+      <h2>Criar uma apresentação (Em branco e Modelos)</h2>
+      <p>
+        Ao abrir o Google Slides, você pode iniciar uma apresentação de duas formas:
+      </p>
+      <ul>
+        <li><strong>Em branco</strong>: cria uma apresentação vazia, pronta para edição;</li>
+        <li><strong>Galeria de modelos</strong>: oferece modelos prontos (apresentação geral, projetos, álbum de fotos, entre outros).</li>
+      </ul>
+
+      <p>
+        Neste material, utilizaremos a opção <strong>Em branco</strong> para demonstrar os recursos principais.
+      </p>
+
+      <figure>
+        <img src="imagens/cap3_em_branco_modelos.png" alt="Tela inicial do Google Slides com Em branco e Galeria de modelos" />
+        <figcaption>Figura 3 — Sugestão: tela inicial com “Em branco” e “Galeria de modelos”.</figcaption>
+      </figure>
+
+      <h2>Interface do Google Slides</h2>
+
+
+      <p>
+        A interface do Google Slides é semelhante à do Microsoft PowerPoint, o que facilita a adaptação.
+        Em geral, você encontrará:
+      </p>
+      <ul>
+        <li><strong>Miniaturas de slides</strong> (lateral esquerda);</li>
+        <li><strong>Área de edição</strong> do slide (região central);</li>
+        <li><strong>Barra de menus</strong> e <strong>barra de ferramentas</strong> (parte superior).</li>
+      </ul>
+
+      <figure>
+        <img src="imagens/cap4_interface_areas.png" alt="Interface do Google Slides com áreas destacadas" />
+        <figcaption>Figura 4 — Sugestão: interface com marcações (slides à esquerda, área central e menus superiores).</figcaption>
+      </figure>
+
+      <h2>Configurações iniciais (Tema, Título e Salvamento)</h2>
+
+      <h3>5.1 Escolher tema</h3>
+      <p>
+        Ao criar uma apresentação, o Google Slides exibe opções de <strong>temas</strong> (templates) à direita.
+        Você pode selecionar um tema pronto ou usar a opção <strong>Importar tema</strong> para aplicar um modelo personalizado.
+      </p>
+
+      <figure>
+        <img src="imagens/cap5_temas.png" alt="Painel de temas do Google Slides" />
+        <figcaption>Figura 5 — Sugestão: painel de temas com um tema selecionado.</figcaption>
+      </figure>
+
+      <h3>5.2 Inserir título e subtítulo</h3>
+      <p>
+        No slide inicial, utilize:
+      </p>
+      <ul>
+        <li><strong>Clique para adicionar um título</strong>: informe o título da apresentação;</li>
+        <li><strong>Clique para adicionar um subtítulo</strong>: informe nome, e-mail ou outras informações.</li>
+      </ul>
+
+      <figure>
+        <img src="imagens/cap5_titulo_subtitulo.png" alt="Campos de título e subtítulo no slide inicial" />
+        <figcaption>Figura 6 — Sugestão: campos de título e subtítulo preenchidos.</figcaption>
+      </figure>
+
+      <h3>5.3 Nomear e salvar automaticamente</h3>
+      <p>
+        Para nomear o arquivo, clique em <strong>“Apresentação sem título”</strong> no canto superior esquerdo.
+        O salvamento é <strong>automático</strong> e ocorre diretamente no <strong>Google Drive</strong>.
+      </p>
+
+      <figure>
+        <img src="imagens/cap5_nome_arquivo.png" alt="Renomear arquivo Apresentação sem título" />
+        <figcaption>Figura 7 — Sugestão: renomeação do arquivo no topo da tela.</figcaption>
+      </figure>
+
+      <div class="atencao">
+        <strong>Atenção:</strong> mesmo sem clicar em “Salvar”, o Google Slides salva as alterações automaticamente no Drive.
+      </div>
+
+      <h2>Google Drive e Apresentações recentes</h2>
+
+
+      <p>
+        Ao retornar à tela inicial do Google Slides, a apresentação (ex.: <strong>“Zoologia dos Invertebrados”</strong>)
+        aparece em <strong>Apresentações recentes</strong>.
+      </p>
+
+      <p>
+        Para acessar o Google Drive pelo Slides:
+      </p>
+      <ol>
+        <li>Clique no ícone de <strong>três linhas</strong> (menu) no canto superior esquerdo.</li>
+        <li>Selecione a opção <strong>Drive</strong> para abrir o <strong>Meu Drive</strong>.</li>
+      </ol>
+
+      <figure>
+        <img src="imagens/cap6_recentes_menu_drive.png" alt="Apresentações recentes e menu lateral com Drive" />
+        <figcaption>Figura 8 — Sugestão: “Apresentações recentes” e menu lateral com opção “Drive”.</figcaption>
+      </figure>
+
+      <p>
+        No Meu Drive, observe que o arquivo em edição foi salvo automaticamente e pode ser acessado a qualquer momento.
+      </p>
+
+      <figure>
+        <img src="imagens/cap6_arquivo_no_drive.png" alt="Arquivo salvo no Google Drive" />
+        <figcaption>Figura 9 — Sugestão: arquivo “Zoologia dos Invertebrados” salvo no Drive.</figcaption>
+      </figure>
+
+      <h2>Converter PowerPoint para Google Slides</h2>
+
+      <p>
+        O Google Drive permite converter uma apresentação do <strong>PowerPoint</strong> para o formato do <strong>Google Slides</strong>.
+        Ao realizar a conversão, o sistema gera uma <strong>cópia</strong> que pode ser editada e salva ao lado do arquivo original.
+      </p>
+
+      <h3>Passo a passo</h3>
+      <ol>
+        <li>No Google Drive, clique com o botão direito sobre o arquivo do PowerPoint.</li>
+        <li>Clique em <strong>Abrir com</strong>.</li>
+        <li>Selecione <strong>Apresentações</strong>.</li>
+      </ol>
+
+      <figure>
+        <img src="imagens/cap7_abrir_com_apresentacoes.png" alt="Abrir com -> Apresentações no Google Drive" />
+        <figcaption>Figura 10 — Sugestão: menu de contexto com “Abrir com → Apresentações”.</figcaption>
+      </figure>
+
+      <div class="dica">
+        <strong>Dica:</strong> após a conversão, revise fontes, imagens e animações, pois podem ocorrer pequenas diferenças entre formatos.
+      </div>
+      <h2>Upload e Download de arquivos</h2>
+
+
+      <h3>8.1 Upload (enviar arquivo para o Drive)</h3>
+      <p>
+        Para enviar um arquivo do seu dispositivo para o Google Drive, você pode usar o método de arrastar e soltar.
+        Ao final, o Drive exibirá mensagens informando o andamento e a conclusão do envio.
+      </p>
+
+      <ol>
+        <li>Localize o arquivo no seu computador.</li>
+        <li>Clique e segure o arquivo.</li>
+        <li>Arraste para dentro da janela do Google Drive e solte.</li>
+      </ol>
+
+      <figure>
+        <img src="imagens/cap8_upload_arrastar.png" alt="Upload arrastando arquivo para o Google Drive" />
+        <figcaption>Figura 11 — Sugestão: upload por arrastar e soltar na interface do Drive.</figcaption>
+      </figure>
+
+      <h3>8.2 Download (baixar apresentação em outro formato)</h3>
+      <p>
+        Para fazer o download da apresentação em outro formato:
+      </p>
+      <ol>
+        <li>Clique em <strong>Arquivo</strong>.</li>
+        <li>Selecione <strong>Fazer o download</strong>.</li>
+        <li>Escolha o formato desejado (ex.: PowerPoint, PDF etc.).</li>
+      </ol>
+
+      <figure>
+        <img src="imagens/cap8_download_menu.png" alt="Arquivo -> Fazer o download no Google Slides" />
+        <figcaption>Figura 12 — Sugestão: menu “Arquivo → Fazer o download”.</figcaption>
+      </figure>
+
+      <div class="atencao">
+        <strong>Atenção:</strong> o download gera uma cópia no formato escolhido. O arquivo original permanece salvo no Drive.
+      </div>
+
+      <h2>Criar e organizar slides</h2>
+
+
+      <p>
+        Para continuar elaborando sua apresentação, é necessário criar novos slides. Você pode fazer isso de duas formas:
+      </p>
+      <ul>
+        <li>Botão direito sobre um slide (na lateral esquerda) → <strong>Novo slide</strong>;</li>
+        <li>Menu superior <strong>Slide</strong> → <strong>Novo slide</strong>.</li>
+      </ul>
+
+      <figure>
+        <img src="imagens/cap9_novo_slide.png" alt="Adicionar Novo slide no Google Slides" />
+        <figcaption>Figura 13 — Sugestão: opção “Novo slide” destacada no menu de contexto e/ou no menu “Slide”.</figcaption>
+      </figure>
+
+      <h2>Slide Mestre</h2>
+
+
+      <p>
+        O <strong>Slide Mestre</strong> é utilizado quando você precisa alterar ou incluir informações que devem
+        aparecer de forma padronizada em todos os slides (por exemplo: fonte padrão, cores, posicionamento de títulos,
+        rodapé, logotipo, entre outros).
+      </p>
+
+      <h3>Como acessar</h3>
+      <ol>
+        <li>Clique em <strong>Slide</strong>.</li>
+        <li>Selecione <strong>Editar mestre</strong>.</li>
+      </ol>
+
+      <figure>
+        <img src="imagens/cap10_editar_mestre.png" alt="Slide -> Editar mestre no Google Slides" />
+        <figcaption>Figura 14 — Sugestão: menu “Slide → Editar mestre” e visão do editor do mestre.</figcaption>
+      </figure>
+
+      <div class="dica">
+        <strong>Dica:</strong> use o Slide Mestre para manter consistência visual em trabalhos acadêmicos e apresentações institucionais.
+      </div>
+
+      <h2>Formatação de texto</h2>
+
+
+
+      <p>
+        Para formatar textos (tipo de letra, tamanho, alinhamento, negrito, itálico e cor), utilize o menu <strong>Formatar</strong>.
+      </p>
+
+      <h3>Exemplo: alterar a cor da fonte</h3>
+      <ol>
+        <li>Clique em <strong>Formatar</strong>.</li>
+        <li>Selecione <strong>Texto</strong>.</li>
+        <li>Clique em <strong>Cor</strong>.</li>
+        <li>Escolha a cor desejada.</li>
+      </ol>
+
+      <figure>
+        <img src="imagens/cap11_formatar_texto_cor.png" alt="Formatar -> Texto -> Cor no Google Slides" />
+        <figcaption>Figura 15 — Sugestão: menu “Formatar → Texto → Cor” com a paleta aberta.</figcaption>
+      </figure>
+
+      <div class="atencao">
+        <strong>Atenção:</strong> evite excesso de cores. Em apresentações acadêmicas e institucionais, prefira paleta curta e consistente.
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>
+      Material de apoio — Google Slides (Google Apresentações).<br />
+      <span class="mini">Sugestão: manter as imagens na pasta <code>imagens/</code> e nomear conforme os exemplos do arquivo.</span>
+    </p>
+  </footer>
+</body>
+</html>
